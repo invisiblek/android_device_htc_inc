@@ -61,7 +61,7 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 0x0f800000   # limited so we enforce room to
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x09500000
 BOARD_FLASH_BLOCK_SIZE := 131072
 
-TARGET_KERNEL_CONFIG    := evervolv_incrediblec_defconfig
+TARGET_KERNEL_CONFIG    := cyanogenmod_incrediblec_defconfig
 TARGET_RECOVERY_FSTAB   := device/htc/inc/prebuilt/root/fstab.inc
 
 BOARD_HAS_DATADATA := true

@@ -17,9 +17,6 @@
 # Overlay
 DEVICE_PACKAGE_OVERLAYS := device/htc/inc/overlay
 
-# The gps config appropriate for this device
-$(call inherit-product, device/common/gps/gps_us.mk)
-
 PRODUCT_COPY_FILES += \
     device/htc/inc/prebuilt/root/init.inc.rc:root/init.inc.rc \
     device/htc/inc/prebuilt/root/init.inc.usb.rc:root/init.inc.usb.rc \
@@ -112,10 +109,6 @@ PRODUCT_PROPERTY_OVERRIDES += ro.vold.umsdirtyratio=20
 $(call inherit-product, device/htc/qsd8k-common/qsd8k.mk)
 
 $(call inherit-product-if-exists, vendor/htc/inc/inc-vendor.mk)
-
-#$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-$(call inherit-product, $(SRC_EVERVOLV_DIR)/product/lite_base_telephony.mk)
-
 
 PRODUCT_NAME := full_inc
 PRODUCT_DEVICE := inc
