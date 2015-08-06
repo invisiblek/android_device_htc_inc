@@ -102,9 +102,6 @@ PRODUCT_PACKAGES += \
 ADDITIONAL_DEFAULT_PROPERTIES += \
     persist.sys.usb.config=mass_storage
 
-# Recovery
-TARGET_RECOVERY_UI_LIB := librecovery_htc_inc
-
 # Set dirty_ratio for UMS
 PRODUCT_PROPERTY_OVERRIDES += ro.vold.umsdirtyratio=20
 
