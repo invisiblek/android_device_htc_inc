@@ -56,8 +56,8 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/usb_mass_storage/lun%d/
 # mtd5: 02800000 00020000 "cache"
 # mtd6: 09500000 00020000 "datadata"
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x00300000
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x00480000
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 0x0f800000   # limited so we enforce room to grow
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0xffffffff  # absolute garbage hack here, don't use recovery from a cm build...
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 0xffffffff   # limited so we enforce room to grow
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x09500000
 BOARD_FLASH_BLOCK_SIZE := 131072
 
