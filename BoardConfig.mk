@@ -75,3 +75,4 @@ BOARD_CACHE_FILESYSTEM := auto
 
 # Make sure vold formats the proper sdcard partition
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
+RECOVERY_SDCARD_ON_DATA := true
