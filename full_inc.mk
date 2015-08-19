@@ -20,11 +20,12 @@ DEVICE_PACKAGE_OVERLAYS := device/htc/inc/overlay
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_us.mk)
 
-PRODUCT_COPY_FILES += \
-    device/htc/inc/prebuilt/root/init.inc.rc:root/init.inc.rc \
-    device/htc/inc/prebuilt/root/init.inc.usb.rc:root/init.inc.usb.rc \
-    device/htc/inc/prebuilt/root/ueventd.inc.rc:root/ueventd.inc.rc \
-    device/htc/inc/prebuilt/root/fstab.inc:root/fstab.inc
+# Ramdisk
+PRODUCT_PACKAGES += \
+    fstab.inc \
+    init.inc.rc \
+    init.inc.usb.rc \
+    ueventd.inc.rc
 
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.error.receiver.system.apps=com.google.android.feedback \
